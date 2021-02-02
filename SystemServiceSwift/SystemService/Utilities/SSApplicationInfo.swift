@@ -17,7 +17,6 @@ public enum SSApplicationInfo {
     public static var clipboardContent: String = {
         var pasteBoard = UIPasteboard.general
         var clipboardContent = pasteBoard.string
-        if (clipboardContent == nil) { return "" }
-        return clipboardContent as! String
+        return clipboardContent ?? ""
     }()
 }

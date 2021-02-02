@@ -9,7 +9,7 @@ import Foundation
 public enum SSProcessInfo {
 
     public static var processID: Int {
-        var pid = getpid()
+        let pid = getpid()
         if pid < 0 {
             return -1
         }
