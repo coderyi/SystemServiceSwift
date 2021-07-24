@@ -10,7 +10,7 @@ import UIKit
 public enum SSApplicationInfo {
     
     public static let applicationVersion: String = {
-        let version: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+        let version: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
         return version
     }()
 
